@@ -7,11 +7,12 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "frida-compile agent/index.ts -o _agent.js -c",
-    "watch": "frida-compile agent/index.ts -o _agent.js -w"
+    "watch": "frida-compile agent/index.ts -o _agent.js -w",
+    "debug": "frida -U --debug --runtime=v8 -l _agent.js -o out.log  -f com.android.settings"
   },
   "devDependencies": {
     "@types/frida-gum": "^18.5.1",
-    "@types/node": "^18.19.3",
+    "@types/node": "^20.10.4",
     "frida-compile": "^16.4.1"
   }
 }

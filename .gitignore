@@ -1,2 +1,6 @@
 /_agent.js
 /node_modules
+.DS_Store
+out.log
+frida-*.so
+frida-server*
